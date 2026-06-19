@@ -10,4 +10,4 @@ Building enterprise-grade, agentic data pipelines on Microsoft Fabric.
 
 ## 📝 Learning Diary
 * **June 10, 2026:** Initialized project structure and professional Git workflow.
-  **June 19, 2026:** Implemented 'Hello World' RAG pipeline using LangChain and Ollama.
+  **June 19, 2026:** Implemented 'Hello World' RAG pipeline using LangChain and Ollama.  
