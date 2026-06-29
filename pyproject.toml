@@ -11,4 +11,6 @@ dependencies = [
     "langchain-ollama>=1.1.0",
     "langchain-text-splitters>=1.1.2",
     "pypdf>=6.13.3",
+    "rank-bm25>=0.2.2",
+    "sentence-transformers>=3.0.0",
 ]
