@@ -5,7 +5,8 @@ Building enterprise-grade, agentic data pipelines on Microsoft Fabric.
 - [x] Environment setup (uv + Python)
 - [x] GitHub repository initialization
 - [x] Fundamentals: Embeddings & Vector Databases
-- [x] Advanced RAG implementation
+- [x] Advanced RAG: Conversational Memory
+- [ ] Hybrid Search & Reranking
 - [ ] Agentic Orchestration
 
 ## 📝 Learning Diary
@@ -13,9 +14,11 @@ Building enterprise-grade, agentic data pipelines on Microsoft Fabric.
   **June 19, 2026:** Implemented 'Hello World' RAG pipeline using LangChain and Ollama.  
   **June 19, 2026:** Upgraded RAG pipeline to ingest PDF documents using PyPDFLoader.
    **June 20, 2026:** Upgraded RAG pipeline to a persistent vector database architecture using ChromaDB, complete with an interactive query loop.
+  **June 29, 2026:** Implemented Conversational Memory. Upgraded architecture to maintain session state, allowing the agent to handle context-dependent follow-up queries.
 
 ## Project Versions
 - `main.py`: The production-ready RAG agent.
 - `rag_v1_basic.py`: The original prototype using hardcoded data.
 - `rag_v2_pdf.py`: Implementation using `PyPDFLoader` to ingest external PDF knowledge.
 -`rag_v3_vector_db.py`: Advanced RAG with persistent ChromaDB vector storage and an interactive chat loop
+- `rag_v4_memory.py`: **Advanced RAG** with `ChatMessageHistory` for stateful, multi-turn conversations.
