@@ -1,18 +1,20 @@
-from langchain_ollama import OllamaLLM
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_community.document_loaders import PyPDFLoader
 
-# 1. Load the document
-loader = PyPDFLoader("data/knowledge.pdf")
+from config_loader import load_config
+from services.llm_provider import get_llm
+
+config = load_config()
+paths_cfg = config["paths"]
+
+loader = PyPDFLoader(paths_cfg["knowledge_base"])
 pages = loader.load()
 context = "\n".join([page.page_content for page in pages])
 
-# 2. Setup the model
-model = OllamaLLM(model="llama3")
+model = get_llm(config)
 prompt = ChatPromptTemplate.from_template("Answer based on this: {context}\n\nQuestion: {question}")
 chain = prompt | model
 
-# 3. Query
 question = "What are the key takeaways from this document?"
 response = chain.invoke({"context": context, "question": question})
 

@@ -1,0 +1,19 @@
+# Model Settings
+llm:
+  provider: "ollama"
+  model_name: "llama3"
+  embedding_model: "nomic-embed-text"
+  temperature: 0.0
+
+# Retrieval Settings
+retrieval:
+  chunk_size: 500
+  chunk_overlap: 50
+  top_k_initial: 10
+  top_n_rerank: 3
+  reranker_model: "BAAI/bge-reranker-v2-m3"
+
+# Paths
+paths:
+  knowledge_base: "data/knowledge.pdf"
+  chroma_db: "./chroma_db"
